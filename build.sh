@@ -3,6 +3,7 @@ export Scripts=prebuilts/Scripts
 export CROSS_COMPILE=prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-UB-4.9/bin/arm-linux-androideabi-
 # Delete things from last build
 make clean
+make mrproper
 rm -rf boot && rm -rf out
 # Time to make kernel zImage
 make ARCH=arm lineageos_shinano_leo_defconfig
