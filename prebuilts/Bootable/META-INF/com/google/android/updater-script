@@ -1,0 +1,10 @@
+(!less_than_int(1494788860, getprop("ro.build.date.utc"))) || abort("E3003: Can't install this package (nie, 14 maj 2017, 21:07:40 CEST) over newer build (" + getprop("ro.build.date") + ").");
+assert(getprop("ro.product.device") == "D6602" || getprop("ro.build.product") == "D6602" || getprop("ro.product.device") == "D6603" || getprop("ro.build.product") == "D6603" || getprop("ro.product.device") == "D6633" || getprop("ro.build.product") == "D6633" || getprop("ro.product.device") == "D6643" || getprop("ro.build.product") == "D6643" || getprop("ro.product.device") == "D6653" || getprop("ro.build.product") == "D6653" || getprop("ro.product.device") == "z3" || getprop("ro.build.product") == "z3" || getprop("ro.product.device") == "leo" || getprop("ro.build.product") == "leo" || abort("E3004: This package is for device: D6602,D6603,D6633,D6643,D6653,z3,leo; this device is " + getprop("ro.product.device") + "."););
+unmount("/system");
+show_progress(0.050000, 5);
+ui_print("Time to make it booting");
+ui_print("------------------");
+ui_print("All for you Ador");
+ui_print("------------------");
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+ui_print("This shouldn't break your Z3")
