@@ -17,6 +17,7 @@ perl $Scripts/split_boot $Scripts/boot.img
 ./$Scripts/mkbootimg --kernel arch/arm/boot/zImage-dtb --ramdisk boot/boot.img-ramdisk.cpio.gz --base 0x00000000 --ramdisk_offset 0x02000000 --tags_offset 0x01E00000 --pagesize 2048 --cmdline "androidboot.hardware=qcom ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" -o out/boot.img
 # On the other hand, we can make bootable zip. It's simple.
 cp -r $Boot/META-INF out/META-INF
+cp -r $Boot/magisk out/magisk
 cd out && zip -r JavKernel.zip *
 # Print some things
 echo -e "\e[96m--------------------------"
